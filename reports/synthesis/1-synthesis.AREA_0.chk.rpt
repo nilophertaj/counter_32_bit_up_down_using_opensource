@@ -1,0 +1,36 @@
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module counter_32_bit_up_down...
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [31] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [30] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [29] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [28] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [27] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [26] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [25] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [24] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [23] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [22] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [21] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [20] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [19] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [18] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [17] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [16] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [15] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [14] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [13] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [12] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [11] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [10] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [9] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [8] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [7] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [6] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [5] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [4] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [3] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [2] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [1] is used but has no driver.
+Warning: Wire counter_32_bit_up_down.\OUT_COUNT [0] is used but has no driver.
+Found and reported 32 problems.

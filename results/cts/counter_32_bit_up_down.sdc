@@ -1,0 +1,91 @@
+###############################################################################
+# Created by write_sdc
+# Thu Apr  2 16:40:00 2026
+###############################################################################
+current_design counter_32_bit_up_down
+###############################################################################
+# Timing Constraints
+###############################################################################
+create_clock -name clk -period 6.0000 [get_ports {clk}]
+set_clock_transition 0.1500 [get_clocks {clk}]
+set_clock_uncertainty 0.2500 clk
+set_propagated_clock [get_clocks {clk}]
+set_input_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {INP_NEG_RST}]
+set_input_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {INP_UP_DOWN}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[0]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[10]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[11]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[12]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[13]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[14]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[15]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[16]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[17]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[18]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[19]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[1]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[20]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[21]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[22]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[23]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[24]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[25]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[26]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[27]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[28]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[29]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[2]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[30]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[31]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[3]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[4]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[5]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[6]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[7]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[8]}]
+set_output_delay 1.2000 -clock [get_clocks {clk}] -add_delay [get_ports {OUT_COUNT[9]}]
+###############################################################################
+# Environment
+###############################################################################
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[31]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[30]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[29]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[28]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[27]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[26]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[25]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[24]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[23]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[22]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[21]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[20]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[19]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[18]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[17]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[16]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[15]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[14]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[13]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[12]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[11]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[10]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[9]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[8]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[7]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[6]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[5]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[4]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[3]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[2]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[1]}]
+set_load -pin_load 0.0334 [get_ports {OUT_COUNT[0]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {INP_NEG_RST}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {INP_UP_DOWN}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {clk}]
+set_timing_derate -early 0.9500
+set_timing_derate -late 1.0500
+###############################################################################
+# Design Rules
+###############################################################################
+set_max_transition 0.7500 [current_design]
+set_max_fanout 10.0000 [current_design]
