@@ -110,4 +110,62 @@ run_magic_drc
 run_lvs
 run_gds
 ```
-## Physical Design Flow
+---
+
+
+# 🔄 6. Physical Design Flow
+![alt](https://github.com/nilophertaj/counter_32_bit_up_down_using_opensource/blob/eee57aa7e6993adc744da7c68b798906cba5bba2/assets/Physical_design_flow.JPG)
+
+---
+
+# 📊 7. Reports
+Run inside OpenROAD:
+```c
+report_design_area - For Area
+report_checks      - Timing (Slack)
+report_wns         - WNS
+report_tns         - TNS 
+report_power       - Power
+```
+
+---
+
+# 📦 8. Output Files
+Location:
+```c
+runs/<run_name>/results/
+```
+Important files:
+final/gds/*.gds → Final layout
+final/def/*.def → Routed design
+synthesis/*.v → Netlist
+*.sdc → Constraints
+
+--- 
+
+# 9. Layout Visualization
+OpenROAD GUI
+```c
+- openroad
+- read_lef /home/ingenious_engineer/OpenLane/designs/counter_32_bit_up_down/runs/RUN_2026.04.02_16.38.45/tmp/merged.nom.lef
+- read_def /home/ingenious_engineer/OpenLane/designs/counter_32_bit_up_down/runs/RUN_2026.04.02_16.38.45/results/routing/counter_32_bit_up_down.def
+- read_liberty /home/ingenious_engineer/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+- read_verilog /home/ingenious_engineer/OpenLane/designs/counter_32_bit_up_down/runs/RUN_2026.04.02_16.07.25/results/synthesis/counter_32_bit_up_down.v
+- read_sdc /home/ingenious_engineer/OpenLane/designs/counter_32_bit_up_down/src/counter_32_bit_up_down.sdc
+- gui::show
+- zoom_to_fit
+```
+## KLayout
+```c
+klayout counter_32_bit_up_down.gds
+```
+
+---
+
+# ⚠️ 10. Important Notes
+- Use merged.nom.lef for GUI
+- Do NOT use link_design for layout viewing
+- GDS is generated only after run_gds
+
+
+
