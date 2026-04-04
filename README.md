@@ -1,6 +1,5 @@
-# counter_32_bit_up_down_using_opensource
 # 🚀 RTL-to-GDS Flow using OpenLane & OpenROAD  
-## 32-bit Up/Down Counter (Physical Design Project)
+## 32-bit Up/Down Counter 
 
 ---
 
@@ -12,44 +11,37 @@ The design starts from Verilog RTL and goes through all backend stages to genera
 
 ---
 
-# 🧠 2. OpenLane vs OpenROAD
 
-## 🔹 OpenLane
-OpenLane is an **automated RTL-to-GDS flow manager**.
+# 🛠️ 2. Tools Used
+## VLSI Flow
 
-- Controls the full design flow  
-- Runs all stages in sequence  
-- Manages scripts, configs, and outputs  
+![OpenLane](https://img.shields.io/badge/OpenLane-RTL--to--GDS-blue?style=for-the-badge)
+![OpenROAD](https://img.shields.io/badge/OpenROAD-Physical%20Design-green?style=for-the-badge)
+![Magic](https://img.shields.io/badge/Magic-Layout%20%2B%20DRC-orange?style=for-the-badge)
+![KLayout](https://img.shields.io/badge/KLayout-Viewer%20%2B%20Debug-purple?style=for-the-badge)
+---
 
-✔ Think of it as the **controller**
+# 🧠 3. OpenLane vs OpenROAD
+
+| Feature | OpenLane | OpenROAD |
+|--------|----------|----------|
+| Type | Automated RTL-to-GDS flow | Physical design tool |
+| Purpose | Complete design flow | Performs PD stages (PnR, CTS, routing) |
+| Usage | Easy, script-based | More control, manual tuning |
+| Role | Uses OpenROAD internally | Core engine |
+| Summary | Full flow | Core tool |
 
 ---
 
-## 🔹 OpenROAD
-OpenROAD is the **physical design engine**.
+# Magic vs KLayout
 
-- Floorplanning  
-- Placement  
-- Clock Tree Synthesis (CTS)  
-- Routing  
-- Timing analysis  
-
-✔ Think of it as the **execution engine**
-
----
-
-## 🔥 Relationship
-
-OpenLane → controls → OpenROAD → performs PD operations
-
----
-
-# 🛠️ 3. Tools Used
-
-- OpenLane  
-- OpenROAD  
-- Magic  
-- KLayout  
+| Feature | Magic | KLayout |
+|--------|-------|---------|
+| Purpose | Layout design + DRC | Layout viewing + analysis |
+| Usage | Design tool | Viewer/debug tool |
+| DRC | Built-in | Script-based |
+| Role | Creates layout | Analyzes layout |
+| Summary | Designer tool | Viewer tool |
 
 ---
 
@@ -123,8 +115,8 @@ Run inside OpenROAD:
 ```c
 report_design_area - For Area
 report_checks      - Timing (Slack)
-report_wns         - WNS
-report_tns         - TNS 
+report_wns         - WNS (worst negative slack)
+report_tns         - TNS (total negative slack)
 report_power       - Power
 ```
 
@@ -159,7 +151,6 @@ OpenROAD GUI
 ```c
 klayout counter_32_bit_up_down.gds
 ```
-
 ---
 
 # ⚠️ 10. Important Notes
