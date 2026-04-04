@@ -81,6 +81,10 @@ set ::env(PL_TARGET_DENSITY) 0.55
 
 # 🚀 5. RTL-to-GDS Flow Execution
 
+![alt](https://github.com/nilophertaj/counter_32_bit_up_down_using_opensource/blob/eee57aa7e6993adc744da7c68b798906cba5bba2/assets/Physical_design_flow.JPG)
+
+---
+
 ## Start OpenLane
 ```c
 ./flow.tcl -interactive
@@ -95,47 +99,42 @@ run_placement
 run_cts
 run_routing
 ```
-## Generate Layout & GDS
+## Generate Magic Layout & GDS
 ```c
 run_magic
 run_magic_drc
 run_lvs
 run_gds
 ```
----
-
-
-# 🔄 6. Physical Design Flow
-![alt](https://github.com/nilophertaj/counter_32_bit_up_down_using_opensource/blob/eee57aa7e6993adc744da7c68b798906cba5bba2/assets/Physical_design_flow.JPG)
+![alt](https://github.com/nilophertaj/counter_32_bit_up_down_using_opensource/blob/f9e05defaf07bbb609056a51e8186fbf8a2b0600/assets/PDS/magic.png)
+![alt](https://github.com/nilophertaj/counter_32_bit_up_down_using_opensource/blob/f9e05defaf07bbb609056a51e8186fbf8a2b0600/assets/PDS/magic_z.png)
+![alt](https://github.com/nilophertaj/counter_32_bit_up_down_using_opensource/blob/f9e05defaf07bbb609056a51e8186fbf8a2b0600/assets/PDS/klayout.magic.gds.png)
 
 ---
 
-# 📊 7. Reports
-Run inside OpenROAD:
+## KLayout
 ```c
-report_design_area - For Area
-report_checks      - Timing (Slack)
-report_wns         - WNS (worst negative slack)
-report_tns         - TNS (total negative slack)
-report_power       - Power
+klayout counter_32_bit_up_down.gds
 ```
+![alt](https://github.com/nilophertaj/counter_32_bit_up_down_using_opensource/blob/f9e05defaf07bbb609056a51e8186fbf8a2b0600/assets/PDS/klayout_console.png)
+![alt](https://github.com/nilophertaj/counter_32_bit_up_down_using_opensource/blob/f9e05defaf07bbb609056a51e8186fbf8a2b0600/assets/PDS/klayout.gds.png)
 
 ---
 
-# 📦 8. Output Files
+# 📦 6. Output Files
 Location:
 ```c
 runs/<run_name>/results/
 ```
 Important files:
-final/gds/*.gds → Final layout
-final/def/*.def → Routed design
-synthesis/*.v → Netlist
-*.sdc → Constraints
+- final/gds/*.gds → Final layout
+- final/def/*.def → Routed design
+- synthesis/*.v → Netlist
+- *.sdc → Constraints
 
 --- 
 
-# 9. Layout Visualization
+# 7. Layout Visualization
 OpenROAD GUI
 ```c
 - openroad
@@ -147,16 +146,29 @@ OpenROAD GUI
 - gui::show
 - zoom_to_fit
 ```
-## KLayout
+![alt](https://github.com/nilophertaj/counter_32_bit_up_down_using_opensource/blob/f9e05defaf07bbb609056a51e8186fbf8a2b0600/assets/PDS/openroad.png)
+# Reports
+Run inside OpenROAD:
 ```c
-klayout counter_32_bit_up_down.gds
+report_design_area - Area
+report_checks      - Timing (Slack)
+report_wns         - WNS (worst negative slack)
+report_tns         - TNS (total negative slack)
+report_power       - Power
 ```
+![alt](https://github.com/nilophertaj/counter_32_bit_up_down_using_opensource/blob/f9e05defaf07bbb609056a51e8186fbf8a2b0600/assets/PDS/report1.png)
+![alt](https://github.com/nilophertaj/counter_32_bit_up_down_using_opensource/blob/f9e05defaf07bbb609056a51e8186fbf8a2b0600/assets/PDS/report2.png)
+
 ---
 
-# ⚠️ 10. Important Notes
-- Use merged.nom.lef for GUI
-- Do NOT use link_design for layout viewing
-- GDS is generated only after run_gds
+## Generated GDS File
+![alt](https://github.com/nilophertaj/counter_32_bit_up_down_using_opensource/blob/f9e05defaf07bbb609056a51e8186fbf8a2b0600/assets/PDS/gds.png)
+
+# ⚠️ 8. Important Notes (errors i faced during execution)
+- Use `merged.nom.lef` for GUI visualization
+- Do NOT use `link_design` for layout viewing
+- Ensure the Sky130 technology file is loaded in Magic to view the chip layout
+- The GDS file is generated only after running `run_gds` during Magic layout generation
 
 
 
